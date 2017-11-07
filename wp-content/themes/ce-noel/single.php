@@ -11,8 +11,10 @@
                             the_post(); ?>
 
                             <?php get_template_part('single-content'); ?>
+                            <div class="comments-template"> <?php comments_template(); ?> </div>
 
                         <?php endwhile; ?>
+
                         <ul style="margin-right: 100px;">
                             <li class="pull-left"><?php previous_post_link(); ?></li>
                             <li class="pull-right"><?php next_post_link(); ?></li>

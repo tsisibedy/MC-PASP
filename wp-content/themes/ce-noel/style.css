@@ -24,4 +24,13 @@ Text Domain: cenoel
 .a:hover{
     color: #c7ddef;
 }
+.widget_categories,.widget_text,.widget_archive{
+    border: 1px solid #be3631;
+}
+.screen-reader-text{
+    display: none;
+}
+li{
+    list-style-type: none;
+}
 

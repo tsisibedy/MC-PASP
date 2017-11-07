@@ -1,60 +1,25 @@
 <div class="row" style="width: 300px;float: right;margin-top: 15px;">
-    <div class="panel-group" style="margin: auto;">
-        <div class="panel panel-info">
-            <div class="panel-heading" style="background-color:#be3631;color: white; ">CATEGORIES</div>
-            <div class="panel-body">Panel Content</div>
-            <div class="panel-body">Panel Content</div>
-            <div class="panel-body">Panel Content</div>
-            <div class="panel-body">Panel Content</div>
-            <div class="panel-body">Panel Content</div>
+    <?php if (is_active_sidebar('widgetized-menu')) : ?>
+        <div class="panel-body">
+            <?php dynamic_sidebar('widgetized-menu'); ?>
+            <div id="" class="panel-group" style="border: 1px solid #be3631;">
+                <div id="" class="panel-group"><div style="background-color: #be3631;padding: 5px;color: white;">LIST DES ORGANISLME RATACHE</div>
+                    <ul>
+                        <li class="cat-item cat-item-9"><a href="https://www.facebook.com/mcpaspMG/"><img
+                                        src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
+                                        style="width: 20px;height: 20px;"></a>
+                        </li><br>
+                        <li class="cat-item cat-item-10"><a href="https://www.facebook.com/mcpaspMG/"><img
+                                        src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
+                                        style="width: 20px;height: 20px;"></a>
+                        </li><br>
+                        <li class="cat-item cat-item-11"><a href="https://www.facebook.com/mcpaspMG/"><img
+                                        src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
+                                        style="width: 20px;height: 20px;"></a>
+                        </li>
+                    </ul>
+                </div>
         </div>
-        <br>
-        <div class="panel panel-info">
-            <div class="panel-heading" style="background-color:#be3631;color: white; ">LES ORGANISME RATACHES</div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la culture facebook</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gmail.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la culture gmail</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/unesco.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la unesco</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/pnud.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la pnud</span>
-            </div>
-        </div>
-        <br>
-        <div class="panel panel-info">
-            <div class="panel-heading" style="background-color:#be3631;color: white; ">TEXT</div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la culture facebook</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gmail.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la culture gmail</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/unesco.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la unesco</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/pnud.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la pnud</span>
-            </div>
-        </div>
-        <br>
-        <div class="panel panel-info">
-            <div class="panel-heading" style="background-color:#be3631;color: white; ">ARCHIVE DES PHOTOS</div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la culture facebook</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gmail.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la culture gmail</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/unesco.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la unesco</span>
-            </div>
-            <div class="panel-body"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/pnud.png"
-                                                     style="width: 20px;height: 20px;"></a><span> Ministere de la pnud</span>
-            </div>
-        </div>
-    </div>
+    <?php endif; ?>
+
 </div>

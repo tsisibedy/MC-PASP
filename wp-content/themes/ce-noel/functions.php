@@ -3,7 +3,7 @@ define('VERSION', '1.0.0');
 function cenoel_scripts()
 {
     wp_enqueue_style('cenoelstyle', get_template_directory_uri() . '/style.css', array(), VERSION, 'all');
-    wp_enqueue_style('bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), VERSION, 'all');
+    wp_enqueue_style('bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array('3wschool'), VERSION, 'all');
     wp_enqueue_style('3wschool', 'https://www.w3schools.com/w3css/4/w3.css', array(), VERSION, 'all');
     wp_enqueue_style('awesonstyle', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), VERSION, 'all');
     wp_enqueue_script('jqueryscript', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), VERSION, true);
@@ -44,3 +44,16 @@ function new_excerpt_more($more)
 }
 
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function cenoel_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Menu right',
+        'id'            => 'widgetized-menu',
+        'description'   => 'Widgets a afficher dans footer: 4 au maximum',
+        'before_widget' => '<div id="%1$s" class="panel-group %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div style="background-color: #be3631;padding: 5px;color: white;">',
+        'after_title'   => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'cenoel_widgets_init' );
