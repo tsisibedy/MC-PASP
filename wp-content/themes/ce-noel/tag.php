@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
     <!--Body-->
     <section>
         <div style="margin:auto;width: 1000px;" class="container">
@@ -8,6 +7,11 @@
                 <br>
                 <br>
                 <section>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>List des articles avec l'etiquette <?php single_tag_title(''); ?></p>
+                        </div>
+                    </div>
                     <?php if (have_posts()): ?>
                         <?php while (have_posts()):
                             the_post(); ?>
@@ -16,10 +20,6 @@
 
                             <hr style="border: 2px solid #be3631;margin-right:60px;margin-top: 50px;margin-bottom: 50px;">
                         <?php endwhile; ?>
-                        <ul style="margin-right: 100px;">
-                            <li class="pull-left"><a href="<?php previous_posts(); ?>">previous</a></li>
-                            <li class="pull-right"><a href="<?php next_posts(); ?>">next</a></li>
-                        </ul>
                     <?php else: ?>
                         <div class="col-xs-10">
                             <p>Pas de resultats</p>
@@ -27,6 +27,8 @@
                     <?php endif; ?>
                 </section>
             </div>
+            <br>
+            <br>
             <?php get_template_part('menu'); ?>
         </div>
     </section>

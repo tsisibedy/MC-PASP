@@ -1,13 +1,16 @@
 <?php get_header(); ?>
-
     <!--Body-->
     <section>
         <div style="margin:auto;width: 1000px;" class="container">
             <div class="row" style="margin: auto;width: 700px;float: left;">
-                <?php get_template_part('galery'); ?>
                 <br>
                 <br>
                 <section>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Archives dans <?php single_cat_title('', true); ?></p>
+                        </div>
+                    </div>
                     <?php if (have_posts()): ?>
                         <?php while (have_posts()):
                             the_post(); ?>

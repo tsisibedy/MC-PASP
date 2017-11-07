@@ -1,10 +1,8 @@
 <?php get_header(); ?>
-
     <!--Body-->
     <section>
         <div style="margin:auto;width: 1000px;" class="container">
             <div class="row" style="margin: auto;width: 700px;float: left;">
-                <?php get_template_part('galery'); ?>
                 <br>
                 <br>
                 <section>
@@ -12,13 +10,12 @@
                         <?php while (have_posts()):
                             the_post(); ?>
 
-                            <?php get_template_part('content'); ?>
+                            <?php get_template_part('single-content'); ?>
 
-                            <hr style="border: 2px solid #be3631;margin-right:60px;margin-top: 50px;margin-bottom: 50px;">
                         <?php endwhile; ?>
                         <ul style="margin-right: 100px;">
-                            <li class="pull-left"><a href="<?php previous_posts(); ?>">previous</a></li>
-                            <li class="pull-right"><a href="<?php next_posts(); ?>">next</a></li>
+                            <li class="pull-left"><?php previous_post_link(); ?></li>
+                            <li class="pull-right"><?php next_post_link(); ?></li>
                         </ul>
                     <?php else: ?>
                         <div class="col-xs-10">
