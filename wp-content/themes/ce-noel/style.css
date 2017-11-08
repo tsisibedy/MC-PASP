@@ -33,4 +33,6 @@ Text Domain: cenoel
 li{
     list-style-type: none;
 }
-
+.cat-item-5{
+    display: none;
+}

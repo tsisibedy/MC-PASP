@@ -18,10 +18,10 @@ $oddcomment = 'alt';
 ?>
 
     <!-- You can start editing here. -->
-
+<hr style="width: 600px;">
     <div class="cadre_commentaires">
         <?php if ($comments) : ?>
-            <h3 id="comments"><?php comments_number('Pas de commentaire', 'Un commentaire', '% commentaires' );?> pour &#8220;<?php the_title(); ?>&#8221;</h3>
+            <h5 id="comments"><?php comments_number('Pas de commentaire', 'Un commentaire', '% commentaires' );?> </h5>
 
             <ol class="commentlist">
                 <?php foreach ($comments as $comment) : ?>
@@ -29,7 +29,7 @@ $oddcomment = 'alt';
                     <li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
 
                         <div class="commentmetadata">
-                            <strong><?php comment_author_link() ?></strong>, <?php _e('le'); ?> <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('j F, Y') ?> <?php _e('&agrave;');?> <?php comment_time() ?></a> <?php _e('Said&#58;'); ?> <?php edit_comment_link('Edit Comment','',''); ?>
+                            <strong style="color: #5F8E14;"><?php comment_author_link() ?></strong>, <?php _e('le'); ?> <a href="#comment-<?php comment_ID() ?>" title="" style="font-size: 10px;"><?php comment_date('j F, Y') ?> <?php _e('&agrave;');?> <?php comment_time() ?></a> <?php _e(' '); ?> <?php edit_comment_link('<span style="font-size: 10px;">Edit Comment</span>','',''); ?>
                             <?php if ($comment->comment_approved == '0') : ?>
                                 <em><?php _e('Votre commentaire est en cours de mod&eacute;ration'); ?></em>
                             <?php endif; ?>
@@ -42,6 +42,7 @@ $oddcomment = 'alt';
                     if ('alt' == $oddcomment) $oddcomment = '';
                     else $oddcomment = 'alt';
                     ?>
+                    <hr style="width: 400px;">
 
                 <?php endforeach; /* end for each comment */ ?>
             </ol>
@@ -88,7 +89,7 @@ $oddcomment = 'alt';
 
             <!--<p><small><strong>XHTML:</strong> <?php _e('Vous pouvez utiliser ces tags&#58;'); ?> <?php echo allowed_tags(); ?></small></p>-->
 
-            <p><textarea name="comment" id="comment" cols="60" rows="10" tabindex="4"></textarea></p>
+            <p><textarea name="comment" id="comment" cols="80" rows="5" tabindex="4"></textarea></p>
 
             <p><input name="submit" type="submit" id="submit" class="w3-button w3-light-grey" tabindex="5" value="Envoyer" />
                 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />

@@ -19,20 +19,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="color: white;">M.C.P.A.S.P</a>
+            <a class="navbar-brand" href="#" style="color: white;">M.A.C.P</a>
         </div>
 
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
-            <li><a href="https://www.facebook.com/mcpaspMG/"><img
-                            src="<?php echo get_template_directory_uri(); ?>/img/fb.png"
-                            style="width: 20px;height: 20px;"></a></li>
-            <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gmail.png"
-                                 style="width: 20px;height: 20px;"></a></li>
-            <li><a href="www.madagascar-unesco.com"><img
-                            src="<?php echo get_template_directory_uri(); ?>/img/unesco.png"
-                            style="width: 20px;height: 20px;"></a></li>
-            <li><a href="wwww.mg.undp.org"><img src="<?php echo get_template_directory_uri(); ?>/img/pnud.png"
-                                                style="width: 20px;height: 20px;"></a></li>
+            <?php if (is_active_sidebar('logo-menu')) : ?>
+                <?php dynamic_sidebar('logo-menu'); ?>
+            <?php endif; ?>
         </ul>
         <?php
         wp_nav_menu(array(

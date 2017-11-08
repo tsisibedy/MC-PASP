@@ -5,7 +5,7 @@
                 <?php the_title(); ?>
             </h3>
         </a>
-        <div class="col-xs-2" style="float: left;">
+        <div class="col-xs-2" style="float: left;;margin-bottom: 20px;">
             <a href="<?php the_permalink(); ?>"
                style="text-decoration: none;"><?php the_post_thumbnail('thumbnail') ?></a>
         </div>
